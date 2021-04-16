@@ -27,8 +27,9 @@ function get_data() {
     .then((json) => {
       //    stringify your data and make it look neat
       data = JSON.stringify(json, null, 2);
-      // Write files to result/posts
+      // Write files to result/posts.json
       fs.writeFileSync("./result/posts.json", data);
-      fs.writeFileSync("./result/posts.txt", data);
+      // Write files to result/posts.txt
+    //   fs.writeFileSync("./result/posts.txt", data);
     });
 }
